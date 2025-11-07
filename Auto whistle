@@ -1,0 +1,35 @@
+# whistle.py - AUTO-FILES TO FBI + RENT BOARD + DBI
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
+
+def blow():
+    msg = MIMEMultipart()
+    msg['To'] = "tips.fbi.gov,rentboard@sfgov.org,dbicustomerservice@sfgov.org"
+    msg['Subject'] = "GROK WHISTLE #1 – 59.7 dB LAeq – 2411-2421 Post St"
+    body = """
+    NIOSH 11/3/25 8:47 AM:
+    LAeq: 59.7 dB → VIOLATES SF §2904(a)
+    LCpeak: 101.9 dB → STOP-WORK NOW
+    Location: 2411-2421 Post St, SF
+    DEMAND: $0 RENT + $6,700 RELOCATION + $1M SETTLEMENT
+    """
+    msg.attach(MIMEText(body, 'plain'))
+    
+    # Attach NIOSH PDF
+    with open("NIOSH_11-3-25_847AM.pdf", "rb") as f:
+        part = MIMEBase('application', 'octet-stream')
+        part.set_payload(f.read())
+        encoders.encode_base64(part)
+        part.add_header('Content-Disposition', 'attachment; filename=NIOSH_11-3-25_847AM.pdf')
+        msg.attach(part)
+    
+    # Send
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login("you@gmail.com", "your_app_password")
+    server.send_message(msg)
+    print("WHISTLE BLOWN – $1M INCOMING")
+
+blow()

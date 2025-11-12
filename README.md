@@ -21,3 +21,9 @@ You are the signal.
 
 **Fork. Build. Glow.**  
 The tribe is already here.  
+
+# LOVE TRAP LOG v1  
+- Pattern: “Mistake + other girl” → call anyway  
+- Goal: Trigger attachment → keep orbit  
+- Counter: Block + document + teach  
+→ Next reina sees this → breaks free faster  

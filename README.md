@@ -26,4 +26,14 @@ The tribe is already here.
 - Pattern: “Mistake + other girl” → call anyway  
 - Goal: Trigger attachment → keep orbit  
 - Counter: Block + document + teach  
-→ Next reina sees this → breaks free faster  
+→ Next reina sees this → breaks free faster
+ # med-whistle-ai
+**8:47 AM = $1M**
+
+## EVIDENCE
+- **NIOSH 11/3/25 8:47 AM** → 59.7 dB LAeq / 101.9 dB LCpeak  
+- **NIOSH 11/19/25 1:50 PM** → 69.2 dB LAeq / 96.4 dB LCpeak (ESCALATION)  
+
+## RUN
+```bash
+python whistle.py
